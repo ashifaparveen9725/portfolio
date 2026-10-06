@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+frames/
+video_frames_24fps.zip
+video_frames_24fps/
+shot_*.png
+test_browser.js
+convert_webp.py
+extract_frames.py
+server.js
+test_frame.webp
+assets/portrait_front_backup.jpg

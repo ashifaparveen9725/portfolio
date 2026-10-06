@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Development & test artifacts
+shot_*.png
+test_browser.js
+extract_frames.py
+convert_webp.py
+
+# Unused heavy source archives and raw PNG frames (WebP used in production)
+video_frames_24fps.zip
+video_frames_24fps/
+frames/
+test_frame.webp
+assets/portrait_front_backup.jpg
+
+# OS files
+.DS_Store
+Thumbs.db

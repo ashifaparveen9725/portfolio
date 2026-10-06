@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Ashifa Parveen K | AI & ML Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Ashifa Parveen K - Artificial Intelligence & Machine Learning Engineer. Features seamless 360° scroll-driven canvas animation and editorial carousel aesthetics.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23751833'/><text y='65' font-size='50' x='50' text-anchor='middle' fill='%23e5a93b'>✦</text></svg>">
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+  <!-- Minimal Preloader Overlay -->
+  <div id="preloader" class="preloader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <div class="loader-status">
+        <span class="loader-label">CURATING PORTFOLIO</span>
+        <span id="loader-percent" class="loader-percent">0%</span>
+      </div>
+      <div class="loader-track">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Permanently Fixed Background Canvas for 360° Scroll Animation -->
+  <div class="fixed-viewport">
+    <canvas id="animation-canvas"></canvas>
+    <div class="viewport-ambient-overlay"></div>
+  </div>
+
+  <!-- Minimal Floating Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="brand-name">ASHIFA PARVEEN K</span>
+      <span class="brand-dot">✦</span>
+      <span class="brand-tag">AIML ENGINEER</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link nav-link-cta">Let's Connect</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="toggle-cards-btn" class="nav-pill-btn" title="Toggle card opacity to view 360° background video">
+        <span class="btn-icon">👁</span>
+        <span class="btn-text">Peek Video</span>
+      </button>
+      <a href="new_resume.pdf" target="_blank" class="nav-pill-btn nav-pill-primary" download>
+        <span class="btn-icon">↓</span>
+        <span class="btn-text">Resume PDF</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Floating Scroll Indicator -->
+  <div id="frame-indicator" class="frame-indicator">
+    <span class="indicator-icon">✦</span>
+    <span id="indicator-current">01</span>
+    <span class="indicator-divider">/</span>
+    <span id="indicator-total">240</span>
+    <span class="indicator-label">ROTATION</span>
+  </div>
+
+  <!-- Main Scrollable Content Container -->
+  <div class="content-wrapper" id="content-container">
+
+    <!-- ============================================== -->
+    <!-- SLIDE 1: HERO SECTION -->
+    <!-- ============================================== -->
+    <section class="section section-hero" id="hero">
+      
+      <div class="hero-top-badge">
+        <span class="handwritten-script">she decided to believe in her own algorithms ✦</span>
+      </div>
+
+      <div class="hero-editorial-split">
+        
+        <!-- Left Column: Canva Scalloped Stamp Card -->
+        <div class="canva-card hero-stamp-card">
+          <div class="stamp-header">
+            <span class="stamp-postage">EDITION 01 • BENGALURU</span>
+            <span class="stamp-star">★ ★ ★</span>
+          </div>
+          <h1 class="hero-editorial-title">
+            THE FUTURE<br>
+            <span class="hero-title-accent">belongs to</span><br>
+            WOMEN WHO BUILD
+          </h1>
+          <p class="hero-stamp-desc">
+            Bridging state-of-the-art artificial intelligence with intuitive, high-impact human systems.
+          </p>
+          <div class="hero-pills-stack">
+            <span class="hero-pill hero-pill-plum">AI & MACHINE LEARNING</span>
+            <span class="hero-pill hero-pill-outline">B.E. AIML EXPECTED 2027</span>
+          </div>
+        </div>
+
+        <!-- Center Open Focal Zone: Ashifa & Laptops 100% Unobstructed -->
+        <div class="hero-center-focal-zone" aria-hidden="true"></div>
+
+        <!-- Right Column: Canva Ticket Stub & Quick Highlights -->
+        <div class="canva-card hero-ticket-card">
+          <div class="tape-strip"></div>
+          <div class="ticket-header-row">
+            <span class="ticket-tag">AT A GLANCE</span>
+            <span class="ticket-year">2026</span>
+          </div>
+          <h2 class="hero-manifesto-quote">
+            "Your next level requires a braver version of you."
+          </h2>
+          <div class="hero-facts-list">
+            <div class="fact-item">
+              <span class="fact-dot">✦</span>
+              <div>
+                <strong>Flagship:</strong> LegalConnect AI (Llama 3.3 70B)
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="fact-dot">✦</span>
+              <div>
+                <strong>Publication:</strong> IJCSE Peer-Reviewed Paper
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="fact-dot">✦</span>
+              <div>
+                <strong>Internship:</strong> AIML Intern @ Internz Learn
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="fact-dot">✦</span>
+              <div>
+                <strong>Accreditations:</strong> Deloitte, Infosys, GUVI
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-footer">
+            <a href="#about" class="hero-action-link">EXPLORE STORY →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-prompt hero-scroll-prompt" id="scroll-prompt">
+        <div class="scroll-badge-pill">
+          <span class="pulse-dot"></span>
+          <span>SCROLL TO ROTATE 360°</span>
+          <span class="scroll-arrow">↓</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 2: ABOUT ME SECTION -->
+    <!-- ============================================== -->
+    <section class="section section-about" id="about">
+      <div class="grid-about">
+        
+        <!-- Left: Editorial Stamp Card -->
+        <div class="canva-card stamp-card stamp-card-plum">
+          <div class="stamp-header">
+            <span class="stamp-postage">PERSONAL PROFILE • 2026</span>
+            <span class="stamp-star">★ ★ ★</span>
+          </div>
+          <h2 class="editorial-headline stamp-big-title">ABOUT ME</h2>
+          <p class="stamp-lead">
+            I am <strong>Ashifa Parveen K</strong>, an AI/ML Engineer driven by the ambition to engineer intelligent systems that solve high-stakes human challenges.
+          </p>
+          <div class="stamp-meta-box">
+            <div class="meta-row">
+              <span class="meta-label">EDUCATION</span>
+              <span class="meta-val">Don Bosco Institute of Technology</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">DEGREE</span>
+              <span class="meta-val">B.E. in Artificial Intelligence & Machine Learning</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">GRADUATION</span>
+              <span class="meta-val">Expected 2027 • Bengaluru, Karnataka</span>
+            </div>
+          </div>
+          <div class="stamp-quote-script">
+            "Your next level requires a braver, smarter version of you."
+          </div>
+        </div>
+
+        <!-- Right: Polaroid Frame & Sticker Note -->
+        <div class="polaroid-wrapper">
+          <div class="polaroid-card">
+            <div class="tape-strip"></div>
+            <div class="polaroid-img-box">
+              <img src="assets/portrait_front.jpg?v=2" alt="Ashifa Parveen K Portrait" class="polaroid-img">
+            </div>
+            <div class="polaroid-caption">
+              <span class="handwritten-script caption-hand">Ashifa Parveen K</span>
+              <span class="caption-sub">BUILDING TOMORROW'S AI TODAY</span>
+            </div>
+          </div>
+
+          <div class="canva-card quote-ticket-blush">
+            <div class="ticket-notch ticket-notch-left"></div>
+            <div class="ticket-notch ticket-notch-right"></div>
+            <span class="ticket-tag">MANIFESTO</span>
+            <h3 class="ticket-quote">
+              "Nothing blooms all year,<br>and neither should you.<br>Keep iterating, keep deploying."
+            </h3>
+            <span class="handwritten-script ticket-script">start before you feel ready →</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 3: EXPERIENCE SECTION -->
+    <!-- ============================================== -->
+    <section class="section section-experience" id="experience">
+      <div class="section-tag-center">
+        <span class="tag-pill">PRACTICAL IMPACT</span>
+      </div>
+      <h2 class="section-title-center">INSPIRATION THROUGH CODE</h2>
+
+      <div class="experience-card-container">
+        <div class="canva-card experience-ticket">
+          <div class="exp-header-bar">
+            <div class="exp-badge">ROLE & EXPERIENCE</div>
+            <div class="exp-dates">05-03-2025 TO 05-04-2025</div>
+          </div>
+
+          <div class="exp-body">
+            <div class="exp-headline-col">
+              <span class="handwritten-script exp-accent">Internship Journey</span>
+              <h3 class="exp-role">AIML INTERN</h3>
+              <h4 class="exp-company">Internz Learn • India</h4>
+            </div>
+
+            <div class="exp-details-col">
+              <ul class="exp-bullets">
+                <li>
+                  <span class="bullet-star">✦</span>
+                  <div>
+                    <strong>Sentiment Analysis & NLP:</strong> Conducted natural language processing pipelines to classify and extract sentiment signals from unstructured text.
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet-star">✦</span>
+                  <div>
+                    <strong>Neural Network Architectures:</strong> Implemented deep learning classification models and evaluated precision/recall/F1 metrics on labeled benchmark datasets.
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet-star">✦</span>
+                  <div>
+                    <strong>Data Preprocessing & Engineering:</strong> Spearheaded feature selection, tokenization, model training pipelines, and data-driven inference analysis.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-footer-banner">
+            <span>KEY TOOLS: PYTHON • NLP • NEURAL NETS • SCIKIT-LEARN • PANDAS</span>
+            <span class="handwritten-script">verified impact ★</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 4: FEATURED PROJECTS -->
+    <!-- ============================================== -->
+    <section class="section section-projects" id="projects">
+      <div class="section-header-split">
+        <div>
+          <span class="handwritten-script header-cursive">empowered women empower the world</span>
+          <h2 class="editorial-headline section-title-left">SMALL STEPS TODAY LEAD TO BIG RESULTS</h2>
+        </div>
+        <div class="header-stamp-badge">
+          <span>CURATED WORK</span>
+          <strong>03 PROJECTS</strong>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: LegalConnect (Hero Project) -->
+        <div class="canva-card project-card project-card-featured">
+          <div class="proj-badge-row">
+            <span class="proj-featured-tag">FLAGSHIP APPLICATION</span>
+            <span class="proj-stack-highlight">FLUTTER + LLAMA 3.3 70B</span>
+          </div>
+          <h3 class="proj-title">LegalConnect – Smart Legal Assistance Platform</h3>
+          <p class="proj-desc">
+            A comprehensive cross-platform legal services application connecting clients with advocates, featuring AI-assisted legal issue triage, calendar reminders, legal updates, and secure chat.
+          </p>
+          <div class="proj-features-list">
+            <div class="feature-item">
+              <span class="feat-icon">✓</span>
+              <span><strong>Groq API + Llama 3.3 70B:</strong> Parses plain-language legal questions into structured schema (case type, applicable legal sections, filing venue, next steps, and fine range).</span>
+            </div>
+            <div class="feature-item">
+              <span class="feat-icon">✓</span>
+              <span><strong>Deterministic Rule Fallback:</strong> Zero-downtime offline fallback for critical legal scenarios with strict disclaimer safety.</span>
+            </div>
+            <div class="feature-item">
+              <span class="feat-icon">✓</span>
+              <span><strong>Full Stack Backend:</strong> Node.js / Express REST API, JWT authentication, role-based authorization, and Firebase notifications.</span>
+            </div>
+          </div>
+          <div class="tech-tags-cloud">
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Dart</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express</span>
+            <span class="tech-pill">Groq API</span>
+            <span class="tech-pill">Llama 3.3</span>
+            <span class="tech-pill">JWT</span>
+            <span class="tech-pill">Firebase</span>
+          </div>
+        </div>
+
+        <!-- Project 2: AI News Summarizer -->
+        <div class="canva-card project-card">
+          <div class="tape-strip tape-strip-right"></div>
+          <div class="proj-badge-row">
+            <span class="proj-category-tag">NLP & SUMMARIZATION</span>
+          </div>
+          <h3 class="proj-title">AI News Summarizer</h3>
+          <p class="proj-desc">
+            An NLP-powered text distillation engine that digests high-velocity machine learning news and research articles to output concise, actionable executive summaries.
+          </p>
+          <ul class="proj-mini-bullets">
+            <li>Text preprocessing, tokenization, and stop-word filtering.</li>
+            <li>Exploratory data analysis on news corpora.</li>
+            <li>Concise summary extraction tailored for rapid industry briefings.</li>
+          </ul>
+          <div class="tech-tags-cloud">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">NLP</span>
+            <span class="tech-pill">EDA</span>
+            <span class="tech-pill">NLTK</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Data Analysis & Visualization -->
+        <div class="canva-card project-card">
+          <div class="proj-badge-row">
+            <span class="proj-category-tag">BI & ANALYTICS</span>
+          </div>
+          <h3 class="proj-title">Data Analysis & Visualization</h3>
+          <p class="proj-desc">
+            End-to-end data cleansing, exploratory modeling, and dashboard creation across healthcare records, financial portfolios, and historic Olympic datasets.
+          </p>
+          <ul class="proj-mini-bullets">
+            <li>Complex pivot analysis, validation, and multi-tier data cleaning.</li>
+            <li>Interactive Power BI & Tableau dashboards with KPIs.</li>
+            <li>SQL query optimization and structured statistical analysis.</li>
+          </ul>
+          <div class="tech-tags-cloud">
+            <span class="tech-pill">Excel</span>
+            <span class="tech-pill">Power BI</span>
+            <span class="tech-pill">Tableau</span>
+            <span class="tech-pill">SQL</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 5: RESEARCH PUBLICATION -->
+    <!-- ============================================== -->
+    <section class="section section-research" id="research">
+      <div class="research-container">
+        
+        <div class="canva-card research-certificate-card">
+          <div class="cert-ribbon">
+            <span>PEER-REVIEWED PUBLICATION • 2026</span>
+          </div>
+
+          <div class="cert-body">
+            <span class="handwritten-script cert-script">Academic Milestone</span>
+            <h2 class="cert-title">
+              LegalConnect: An Integrated Digital Platform for Legal Advisory, Professional Matching, and Service Coordination
+            </h2>
+            <div class="cert-journal">
+              <strong>International Journal of Computer Science Engineering Techniques (IJCSE)</strong><br>
+              <span>Volume 10, Issue 4 • August 2026</span>
+            </div>
+            
+            <div class="cert-doi-badge">
+              <span class="doi-label">DOI REFERENCE:</span>
+              <a href="https://doi.org/10.5281/zenodo.21997190" target="_blank" class="doi-link">10.5281/zenodo.21997190 ↗</a>
+            </div>
+
+            <p class="cert-summary">
+              Documents the engineering paradigm, AI inference pipeline, advocate matching architecture, and security protocols empowering accessible legal triage through smart conversational AI.
+            </p>
+          </div>
+
+          <div class="cert-footer-stamp">
+            <div class="stamp-seal">
+              <span>IJCSE</span>
+              <span>VERIFIED</span>
+              <span>★ 2026 ★</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 6: SKILLS & CERTIFICATIONS -->
+    <!-- ============================================== -->
+    <section class="section section-skills" id="skills">
+      <div class="section-tag-center">
+        <span class="tag-pill">CORE CAPABILITIES</span>
+      </div>
+      <h2 class="section-title-center">MEET THE TOOLKIT</h2>
+
+      <div class="skills-grid-wrapper">
+
+        <!-- Left: Skills Categories -->
+        <div class="skills-categories-box">
+
+          <div class="canva-card skill-block">
+            <h3 class="skill-category-title">
+              <span class="cat-icon">⚡</span> AI & MACHINE LEARNING
+            </h3>
+            <div class="skills-chips">
+              <span class="chip chip-plum">Machine Learning</span>
+              <span class="chip chip-plum">Deep Learning</span>
+              <span class="chip chip-plum">NLP</span>
+              <span class="chip chip-plum">Sentiment Analysis</span>
+              <span class="chip chip-plum">Neural Networks</span>
+              <span class="chip chip-plum">Generative AI</span>
+            </div>
+          </div>
+
+          <div class="canva-card skill-block">
+            <h3 class="skill-category-title">
+              <span class="cat-icon">💻</span> PROGRAMMING LANGUAGES
+            </h3>
+            <div class="skills-chips">
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Dart</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML5 & CSS3</span>
+            </div>
+          </div>
+
+          <div class="canva-card skill-block">
+            <h3 class="skill-category-title">
+              <span class="cat-icon">🛠</span> FRAMEWORKS, TOOLS & DATABASES
+            </h3>
+            <div class="skills-chips">
+              <span class="chip">Flutter</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="canva-card skill-block">
+            <h3 class="skill-category-title">
+              <span class="cat-icon">📊</span> DATA & BUSINESS INTELLIGENCE
+            </h3>
+            <div class="skills-chips">
+              <span class="chip">Power BI</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">NumPy</span>
+              <span class="chip">Matplotlib</span>
+              <span class="chip">Excel Modeling</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Retro Checkerboard Panel from Canva Template -->
+        <div class="canva-card checkerboard-container">
+          <div class="checkerboard-pattern"></div>
+          <div class="checkerboard-overlay-card">
+            <span class="handwritten-script chk-script">industry accredited</span>
+            <h3 class="chk-title">CERTIFICATIONS</h3>
+            <div class="cert-badges-list">
+              <button type="button" class="cert-item cert-item-btn" id="deloitte-cert-btn" aria-haspopup="dialog" aria-controls="cert-modal" title="Click to view Deloitte Certificate PDF">
+                <div class="cert-btn-left">
+                  <span class="cert-tick">★</span>
+                  <span>Deloitte Certified</span>
+                </div>
+                <span class="cert-action-pill">View PDF ↗</span>
+              </button>
+              <button type="button" class="cert-item cert-item-btn" id="infosys-cert-btn" aria-haspopup="dialog" aria-controls="infosys-modal" title="Click to view Infosys Springboard Certificate PDF">
+                <div class="cert-btn-left">
+                  <span class="cert-tick">★</span>
+                  <span>Infosys Springboard</span>
+                </div>
+                <span class="cert-action-pill">View PDF ↗</span>
+              </button>
+              <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjE3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNDU1MTQzNF8xNjk2MjU0ODc3LnBuZyIsInVzZXJuYW1lIjoiQXNoaWZhIHBhcnZlZW4uayJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2Fthumb_4551434_1696254877.png&_branch_match_id=1634886066216063754&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2F19HU1LrAoqHJJsq8rSk1LLSrKzEuPTyrKLy9OLbJ1TUlPBQCoFL6ROwAAAA%3D%3D" target="_blank" rel="noopener noreferrer" class="cert-item cert-item-btn" id="simplilearn-cert-btn" title="Verify Simplilearn Certified Certificate">
+                <div class="cert-btn-left">
+                  <span class="cert-tick">★</span>
+                  <span>Simplilearn Certified</span>
+                </div>
+                <span class="cert-action-pill">Verify ↗</span>
+              </a>
+              <a href="https://www.guvi.in/verify-certificate?id=4d277801ek2Q786ZS7" target="_blank" rel="noopener noreferrer" class="cert-item cert-item-btn" id="guvi-cert-btn" title="Verify GUVI Tech Accreditation Certificate on guvi.in">
+                <div class="cert-btn-left">
+                  <span class="cert-tick">★</span>
+                  <span>GUVI Tech Accreditation</span>
+                </div>
+                <span class="cert-action-pill">Verify ↗</span>
+              </a>
+            </div>
+            <div class="chk-quote">
+              "Lasting mastery is quiet, deep, and steady. Build with pride."
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 7: CONTACT & FOOTER -->
+    <!-- ============================================== -->
+    <section class="section section-contact" id="contact">
+      <div class="canva-card contact-hero-card">
+        <span class="handwritten-script contact-script">start a conversation today</span>
+        <h2 class="editorial-headline contact-title">YOUR NEXT LEVEL REQUIRES COLLABORATION</h2>
+        <p class="contact-subtitle">
+          Open for Artificial Intelligence & Machine Learning internships, full-stack AI development opportunities, and research partnerships.
+        </p>
+
+        <div class="contact-channels-grid">
+          
+          <a href="mailto:ashifaparveen774@gmail.com" class="contact-channel-item">
+            <div class="channel-icon">✉</div>
+            <div class="channel-info">
+              <span class="channel-type">EMAIL DIRECT</span>
+              <span class="channel-detail">ashifaparveen774@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:6362444624" class="contact-channel-item">
+            <div class="channel-icon">📞</div>
+            <div class="channel-info">
+              <span class="channel-type">PHONE</span>
+              <span class="channel-detail">+91 6362444624</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ashifa-parveen-k-033706292?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+            <div class="channel-icon">🔗</div>
+            <div class="channel-info">
+              <span class="channel-type">LINKEDIN</span>
+              <span class="channel-detail">ashifa-parveen-k ↗</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="contact-actions-row">
+          <a href="mailto:ashifaparveen774@gmail.com?subject=Opportunity%20Discussion%20with%20Ashifa" class="btn-plum-giant">
+            Send an Email ➔
+          </a>
+          <a href="new_resume.pdf" target="_blank" download class="btn-blush-giant">
+            Download Resume (PDF) ↓
+          </a>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <span>DESIGNED WITH EDITORIAL CANVA AESTHETICS • 360° FRAME ENGINE</span>
+          <span>© 2026 ASHIFA PARVEEN K. ALL RIGHTS RESERVED.</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+ 
+  <!-- Certificate Viewer Modal (Deloitte Data Analytics) -->
+  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title" hidden>
+    <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+    <div class="cert-modal-card">
+      <div class="cert-modal-header">
+        <div class="cert-modal-titles">
+          <span class="cert-modal-badge">INDUSTRY ACCREDITATION</span>
+          <h3 id="modal-cert-title" class="cert-modal-h3">Deloitte — Data Analytics Job Simulation</h3>
+          <p class="cert-modal-sub">Certificate of Completion • August 16th, 2025 • Awarded to Ashifa Parveen</p>
+        </div>
+        <button id="cert-modal-close" class="cert-modal-close-btn" aria-label="Close Certificate Preview">✕</button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-preview-frame">
+          <picture>
+            <source srcset="deloitte_certificate_preview.webp" type="image/webp">
+            <img src="deloitte_certificate_preview.png" alt="Deloitte Certificate of Completion - Ashifa Parveen" class="cert-preview-img" loading="lazy">
+          </picture>
+        </div>
+      </div>
+
+      <div class="cert-modal-footer">
+        <div class="cert-verify-info">
+          <span>Verification Code: <code>LEuGhGCJevSTnSJ64</code></span>
+          <span class="cert-dot">•</span>
+          <span>Issued via Forage</span>
+        </div>
+        <div class="cert-modal-actions">
+          <a href="deloitte_certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-secondary">
+            Open PDF in New Tab ↗
+          </a>
+          <a href="deloitte_certificate.pdf" download="Ashifa_Parveen_Deloitte_Certificate.pdf" class="btn-cert-primary">
+            Download PDF ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Viewer Modal (Infosys Springboard) -->
+  <div id="infosys-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-infosys-title" hidden>
+    <div class="cert-modal-backdrop" id="infosys-modal-backdrop"></div>
+    <div class="cert-modal-card">
+      <div class="cert-modal-header">
+        <div class="cert-modal-titles">
+          <span class="cert-modal-badge">INFOSYS SPRINGBOARD CERTIFICATION</span>
+          <h3 id="modal-infosys-title" class="cert-modal-h3">Programming Fundamentals using Python - Part 1</h3>
+          <p class="cert-modal-sub">Course Completion Certificate • September 19, 2024 • Awarded to Ashifa Parveen</p>
+        </div>
+        <button id="infosys-modal-close" class="cert-modal-close-btn" aria-label="Close Certificate Preview">✕</button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-preview-frame">
+          <picture>
+            <source srcset="infosys_certificate_preview.webp" type="image/webp">
+            <img src="infosys_certificate_preview.png" alt="Infosys Springboard Certificate - Programming Fundamentals using Python - Ashifa Parveen" class="cert-preview-img" loading="lazy">
+          </picture>
+        </div>
+      </div>
+
+      <div class="cert-modal-footer">
+        <div class="cert-verify-info">
+          <span>Official Verification: <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="cert-link-inline">verify.onwingspan.com ↗</a></span>
+          <span class="cert-dot">•</span>
+          <span>Infosys Limited (ETA)</span>
+        </div>
+        <div class="cert-modal-actions">
+          <a href="infosys_certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-secondary">
+            Open PDF in New Tab ↗
+          </a>
+          <a href="infosys_certificate.pdf" download="Ashifa_Parveen_Infosys_Python_Certificate.pdf" class="btn-cert-primary">
+            Download PDF ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js?v=9"></script>
+</body>
+</html>
