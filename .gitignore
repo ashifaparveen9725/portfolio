@@ -7,6 +7,8 @@ shot_*.png
 test_browser.js
 extract_frames.py
 convert_webp.py
+local_server.js
+server.js
 
 # Unused heavy source archives and raw PNG frames (WebP used in production)
 video_frames_24fps.zip
