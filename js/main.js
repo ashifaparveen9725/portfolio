@@ -417,6 +417,12 @@
 
     // Infosys Springboard Certificate
     bindModal('infosys-cert-btn', 'infosys-modal', 'infosys-modal-close', 'infosys-modal-backdrop');
+
+    // Simplilearn Certificate
+    bindModal('simplilearn-cert-btn', 'simplilearn-modal', 'simplilearn-modal-close', 'simplilearn-modal-backdrop');
+
+    // GUVI Certificate
+    bindModal('guvi-cert-btn', 'guvi-modal', 'guvi-modal-close', 'guvi-modal-backdrop');
   }
 
   // Initialize

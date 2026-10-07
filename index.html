@@ -2,24 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Ashifa Parveen K | AI & ML Engineer Portfolio</title>
-  <meta name="description" content="Portfolio of Ashifa Parveen K - Artificial Intelligence & Machine Learning Engineer. Features seamless 360° scroll-driven canvas animation and editorial carousel aesthetics.">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Ashifa Parveen K — AI/ML Engineer | Data Analyst | Software Developer</title>
+  <meta name="description" content="B.E. Artificial Intelligence &amp; Machine Learning student building AI, NLP, Generative AI, RAG, data analytics, and full-stack applications.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ashifaparveen.dev/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ashifaparveen.dev/">
+  <meta property="og:title" content="Ashifa Parveen K — AI/ML Engineer | Data Analyst | Software Developer">
+  <meta property="og:description" content="B.E. Artificial Intelligence &amp; Machine Learning student building AI, NLP, Generative AI, RAG, data analytics, and full-stack applications.">
+  <meta property="og:image" content="https://ashifaparveen.dev/assets/portrait_front.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ashifaparveen.dev/">
+  <meta name="twitter:title" content="Ashifa Parveen K — AI/ML Engineer | Data Analyst | Software Developer">
+  <meta name="twitter:description" content="B.E. Artificial Intelligence &amp; Machine Learning student building AI, NLP, Generative AI, RAG, data analytics, and full-stack applications.">
+  <meta name="twitter:image" content="https://ashifaparveen.dev/assets/portrait_front.jpg">
+
+  <!-- Schema.org Person JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ashifa Parveen K",
+    "jobTitle": ["AI/ML Engineer", "Data Analyst", "Software Developer"],
+    "description": "B.E. Artificial Intelligence & Machine Learning student building AI, NLP, Generative AI, RAG, data analytics, and full-stack applications.",
+    "email": "ashifaparveen774@gmail.com",
+    "telephone": "+916362444624",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "addressCountry": "India"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Don Bosco Institute of Technology, Bengaluru"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/ashifa-parveen-k-033706292?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    ]
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23751833'/><text y='65' font-size='50' x='50' text-anchor='middle' fill='%23e5a93b'>✦</text></svg>">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
+  <!-- Accessible Skip Link -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
   <!-- Minimal Preloader Overlay -->
-  <div id="preloader" class="preloader">
+  <div id="preloader" class="preloader" aria-live="polite">
     <div class="loader-content">
-      <div class="loader-spinner"></div>
+      <div class="loader-spinner" aria-hidden="true"></div>
       <div class="loader-status">
         <span class="loader-label">CURATING PORTFOLIO</span>
         <span id="loader-percent" class="loader-percent">0%</span>
@@ -31,40 +76,43 @@
   </div>
 
   <!-- Permanently Fixed Background Canvas for 360° Scroll Animation -->
-  <div class="fixed-viewport">
+  <div class="fixed-viewport" aria-hidden="true">
     <canvas id="animation-canvas"></canvas>
     <div class="viewport-ambient-overlay"></div>
   </div>
 
   <!-- Minimal Floating Navigation Bar -->
-  <header class="navbar">
+  <header class="navbar" role="banner">
     <div class="nav-brand">
-      <span class="brand-name">ASHIFA PARVEEN K</span>
-      <span class="brand-dot">✦</span>
+      <a href="#hero" class="brand-name">ASHIFA PARVEEN K</a>
+      <span class="brand-dot" aria-hidden="true">✦</span>
       <span class="brand-tag">AIML ENGINEER</span>
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary Navigation">
+      <a href="#hero" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
       <a href="#experience" class="nav-link">Experience</a>
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#research" class="nav-link">Research</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#contact" class="nav-link nav-link-cta">Let's Connect</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#contact" class="nav-link nav-link-cta">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button id="toggle-cards-btn" class="nav-pill-btn" title="Toggle card opacity to view 360° background video">
-        <span class="btn-icon">👁</span>
+      <button id="toggle-cards-btn" class="nav-pill-btn" type="button" title="Toggle card opacity to view 360° background video">
+        <span class="btn-icon" aria-hidden="true">👁</span>
         <span class="btn-text">Peek Video</span>
       </button>
-      <a href="new_resume.pdf" target="_blank" class="nav-pill-btn nav-pill-primary" download>
-        <span class="btn-icon">↓</span>
+      <a href="new_resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-pill-btn nav-pill-primary" download="Ashifa_Parveen_Resume.pdf" title="Download Ashifa's Resume PDF">
+        <span class="btn-icon" aria-hidden="true">↓</span>
         <span class="btn-text">Resume PDF</span>
       </a>
     </div>
   </header>
 
   <!-- Floating Scroll Indicator -->
-  <div id="frame-indicator" class="frame-indicator">
+  <div id="frame-indicator" class="frame-indicator" aria-hidden="true">
     <span class="indicator-icon">✦</span>
     <span id="indicator-current">01</span>
     <span class="indicator-divider">/</span>
@@ -73,12 +121,12 @@
   </div>
 
   <!-- Main Scrollable Content Container -->
-  <div class="content-wrapper" id="content-container">
+  <main class="content-wrapper" id="content-container">
 
     <!-- ============================================== -->
     <!-- SLIDE 1: HERO SECTION -->
     <!-- ============================================== -->
-    <section class="section section-hero" id="hero">
+    <section class="section section-hero" id="hero" aria-label="Introduction & Overview">
       
       <div class="hero-top-badge">
         <span class="handwritten-script">she decided to believe in her own algorithms ✦</span>
@@ -87,76 +135,93 @@
       <div class="hero-editorial-split">
         
         <!-- Left Column: Canva Scalloped Stamp Card -->
-        <div class="canva-card hero-stamp-card">
+        <article class="canva-card hero-stamp-card">
           <div class="stamp-header">
             <span class="stamp-postage">EDITION 01 • BENGALURU</span>
-            <span class="stamp-star">★ ★ ★</span>
+            <span class="stamp-star" aria-hidden="true">★ ★ ★</span>
           </div>
+          
+          <div class="hero-role-badge">AI/ML ENGINEER</div>
+
           <h1 class="hero-editorial-title">
             THE FUTURE<br>
             <span class="hero-title-accent">belongs to</span><br>
             WOMEN WHO BUILD
           </h1>
+          
           <p class="hero-stamp-desc">
-            Bridging state-of-the-art artificial intelligence with intuitive, high-impact human systems.
+            Building intelligent applications with Machine Learning, NLP, Generative AI, RAG, and Data Analytics.
           </p>
-          <div class="hero-pills-stack">
-            <span class="hero-pill hero-pill-plum">AI & MACHINE LEARNING</span>
-            <span class="hero-pill hero-pill-outline">B.E. AIML EXPECTED 2027</span>
+
+          <div class="hero-sub-meta">
+            B.E. Artificial Intelligence &amp; Machine Learning • 2027 • Bengaluru
           </div>
-        </div>
+
+          <div class="hero-ctas-group">
+            <a href="#projects" class="hero-cta-btn hero-cta-primary">View Projects</a>
+            <a href="new_resume.pdf" target="_blank" rel="noopener noreferrer" class="hero-cta-btn hero-cta-secondary">View Resume ↗</a>
+            <a href="https://www.linkedin.com/in/ashifa-parveen-k-033706292?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="hero-cta-btn hero-cta-outline">LinkedIn ↗</a>
+            <a href="#contact" class="hero-cta-btn hero-cta-ghost">Contact Me</a>
+          </div>
+
+          <div class="hero-pills-stack">
+            <span class="hero-pill hero-pill-plum">AI &amp; MACHINE LEARNING</span>
+            <span class="hero-pill hero-pill-outline">DATA ANALYTICS</span>
+            <span class="hero-pill hero-pill-outline">SOFTWARE DEVELOPMENT</span>
+          </div>
+        </article>
 
         <!-- Center Open Focal Zone: Ashifa & Laptops 100% Unobstructed -->
         <div class="hero-center-focal-zone" aria-hidden="true"></div>
 
         <!-- Right Column: Canva Ticket Stub & Quick Highlights -->
-        <div class="canva-card hero-ticket-card">
-          <div class="tape-strip"></div>
+        <aside class="canva-card hero-ticket-card">
+          <div class="tape-strip" aria-hidden="true"></div>
           <div class="ticket-header-row">
             <span class="ticket-tag">AT A GLANCE</span>
             <span class="ticket-year">2026</span>
           </div>
-          <h2 class="hero-manifesto-quote">
-            "Your next level requires a braver version of you."
-          </h2>
+          <p class="hero-manifesto-quote">
+            AI/ML Engineer, Data Analyst &amp; Software Developer bridging intelligent models with practical systems.
+          </p>
           <div class="hero-facts-list">
-            <div class="fact-item">
-              <span class="fact-dot">✦</span>
+            <a href="#projects" class="fact-item fact-link" title="Jump to LegalConnect project">
+              <span class="fact-dot" aria-hidden="true">✦</span>
               <div>
-                <strong>Flagship:</strong> LegalConnect AI (Llama 3.3 70B)
+                <strong>Flagship Project:</strong> LegalConnect AI (Llama 3.3 70B • Flutter) ➔
               </div>
-            </div>
-            <div class="fact-item">
-              <span class="fact-dot">✦</span>
+            </a>
+            <a href="#research" class="fact-item fact-link" title="Jump to Research Publication">
+              <span class="fact-dot" aria-hidden="true">✦</span>
               <div>
-                <strong>Publication:</strong> IJCSE Peer-Reviewed Paper
+                <strong>Research:</strong> Published LegalConnect Paper (IJCSE) ➔
               </div>
-            </div>
-            <div class="fact-item">
-              <span class="fact-dot">✦</span>
+            </a>
+            <a href="#experience" class="fact-item fact-link" title="Jump to AIML Internship">
+              <span class="fact-dot" aria-hidden="true">✦</span>
               <div>
-                <strong>Internship:</strong> AIML Intern @ Internz Learn
+                <strong>Experience:</strong> AIML Intern — Internz Learn ➔
               </div>
-            </div>
-            <div class="fact-item">
-              <span class="fact-dot">✦</span>
+            </a>
+            <a href="#certifications" class="fact-item fact-link" title="Jump to Certifications">
+              <span class="fact-dot" aria-hidden="true">✦</span>
               <div>
-                <strong>Accreditations:</strong> Deloitte, Infosys, GUVI
+                <strong>Certifications:</strong> Deloitte • Infosys • Simplilearn • GUVI ➔
               </div>
-            </div>
+            </a>
           </div>
           <div class="hero-card-footer">
-            <a href="#about" class="hero-action-link">EXPLORE STORY →</a>
+            <a href="#projects" class="hero-action-link">EXPLORE PORTFOLIO →</a>
           </div>
-        </div>
+        </aside>
 
       </div>
 
       <div class="scroll-prompt hero-scroll-prompt" id="scroll-prompt">
         <div class="scroll-badge-pill">
-          <span class="pulse-dot"></span>
+          <span class="pulse-dot" aria-hidden="true"></span>
           <span>SCROLL TO ROTATE 360°</span>
-          <span class="scroll-arrow">↓</span>
+          <span class="scroll-arrow" aria-hidden="true">↓</span>
         </div>
       </div>
 
@@ -166,59 +231,71 @@
     <!-- ============================================== -->
     <!-- SLIDE 2: ABOUT ME SECTION -->
     <!-- ============================================== -->
-    <section class="section section-about" id="about">
+    <section class="section section-about" id="about" aria-label="About Ashifa Parveen K">
       <div class="grid-about">
         
         <!-- Left: Editorial Stamp Card -->
         <div class="canva-card stamp-card stamp-card-plum">
           <div class="stamp-header">
-            <span class="stamp-postage">PERSONAL PROFILE • 2026</span>
-            <span class="stamp-star">★ ★ ★</span>
+            <span class="stamp-postage">PERSONAL PROFILE • BENGALURU</span>
+            <span class="stamp-star" aria-hidden="true">★ ★ ★</span>
           </div>
           <h2 class="editorial-headline stamp-big-title">ABOUT ME</h2>
           <p class="stamp-lead">
-            I am <strong>Ashifa Parveen K</strong>, an AI/ML Engineer driven by the ambition to engineer intelligent systems that solve high-stakes human challenges.
+            I am <strong>Ashifa Parveen K</strong>, an Artificial Intelligence &amp; Machine Learning engineering student at Don Bosco Institute of Technology, Bengaluru (Visvesvaraya Technological University, class of 2027).
           </p>
+          <p class="stamp-lead">
+            My technical focus centers on <strong>Machine Learning, Natural Language Processing, Generative AI, Retrieval-Augmented Generation (RAG), Data Analytics, and Software Development</strong>. I concentrate on designing systems that combine robust algorithmic models with responsive, end-to-end full-stack architectures.
+          </p>
+          <p class="stamp-lead">
+            My practical work includes engineering <strong>LegalConnect</strong> (an AI-driven legal assistance and advocate discovery platform), creating an <strong>AI News Summarizer</strong> for automated text distillation, conducting comprehensive <strong>Data Analysis &amp; Visualization</strong> across healthcare, finance, and Olympic datasets, and completing an <strong>AIML Internship</strong> in NLP and neural networks.
+          </p>
+
           <div class="stamp-meta-box">
             <div class="meta-row">
-              <span class="meta-label">EDUCATION</span>
-              <span class="meta-val">Don Bosco Institute of Technology</span>
+              <span class="meta-label">DEGREE</span>
+              <span class="meta-val">B.E. Artificial Intelligence &amp; Machine Learning</span>
             </div>
             <div class="meta-row">
-              <span class="meta-label">DEGREE</span>
-              <span class="meta-val">B.E. in Artificial Intelligence & Machine Learning</span>
+              <span class="meta-label">INSTITUTION</span>
+              <span class="meta-val">Don Bosco Institute of Technology, Bengaluru (VTU)</span>
             </div>
             <div class="meta-row">
               <span class="meta-label">GRADUATION</span>
               <span class="meta-val">Expected 2027 • Bengaluru, Karnataka</span>
             </div>
+            <div class="meta-row">
+              <span class="meta-label">CORE SPECIALIZATION</span>
+              <span class="meta-val">AI/ML • NLP • GenAI &amp; RAG • Data Analytics • Full-Stack</span>
+            </div>
           </div>
+          
           <div class="stamp-quote-script">
-            "Your next level requires a braver, smarter version of you."
+            "Building intelligent applications through real code, structured data, and practical systems."
           </div>
         </div>
 
-        <!-- Right: Polaroid Frame & Sticker Note -->
+        <!-- Right: Polaroid Frame & Technical Focus Note -->
         <div class="polaroid-wrapper">
           <div class="polaroid-card">
-            <div class="tape-strip"></div>
+            <div class="tape-strip" aria-hidden="true"></div>
             <div class="polaroid-img-box">
-              <img src="assets/portrait_front.jpg?v=2" alt="Ashifa Parveen K Portrait" class="polaroid-img">
+              <img src="assets/portrait_front.jpg?v=2" alt="Ashifa Parveen K Portrait" class="polaroid-img" width="270" height="270" loading="lazy">
             </div>
             <div class="polaroid-caption">
               <span class="handwritten-script caption-hand">Ashifa Parveen K</span>
-              <span class="caption-sub">BUILDING TOMORROW'S AI TODAY</span>
+              <span class="caption-sub">AI/ML ENGINEER &amp; DATA ANALYST</span>
             </div>
           </div>
 
           <div class="canva-card quote-ticket-blush">
-            <div class="ticket-notch ticket-notch-left"></div>
-            <div class="ticket-notch ticket-notch-right"></div>
-            <span class="ticket-tag">MANIFESTO</span>
-            <h3 class="ticket-quote">
-              "Nothing blooms all year,<br>and neither should you.<br>Keep iterating, keep deploying."
-            </h3>
-            <span class="handwritten-script ticket-script">start before you feel ready →</span>
+            <div class="ticket-notch ticket-notch-left" aria-hidden="true"></div>
+            <div class="ticket-notch ticket-notch-right" aria-hidden="true"></div>
+            <span class="ticket-tag">TECHNICAL FOCUS</span>
+            <p class="ticket-quote">
+              "Engineering intelligent pipelines by pairing modern language models and retrieval mechanisms with intuitive interfaces and data-driven insights."
+            </p>
+            <span class="handwritten-script ticket-script">focus on depth &amp; craftsmanship ✦</span>
           </div>
         </div>
 
@@ -227,19 +304,116 @@
 
 
     <!-- ============================================== -->
-    <!-- SLIDE 3: EXPERIENCE SECTION -->
+    <!-- SLIDE 3: TECHNICAL SKILLS SECTION -->
     <!-- ============================================== -->
-    <section class="section section-experience" id="experience">
+    <section class="section section-skills" id="skills" aria-label="Technical Skills & Core Capabilities">
       <div class="section-tag-center">
-        <span class="tag-pill">PRACTICAL IMPACT</span>
+        <span class="tag-pill">TECHNICAL SKILLS</span>
       </div>
-      <h2 class="section-title-center">INSPIRATION THROUGH CODE</h2>
+      <h2 class="section-title-center">MEET THE TOOLKIT</h2>
+      <p class="section-subtitle-center">
+        Practical technical proficiency across AI/ML engineering, data analytics, and modern software development.
+      </p>
+
+      <div class="skills-full-grid">
+
+        <!-- 1. AI & Machine Learning -->
+        <div class="canva-card skill-block">
+          <h3 class="skill-category-title">
+            <span class="cat-icon" aria-hidden="true">⚡</span> AI &amp; MACHINE LEARNING
+          </h3>
+          <div class="skills-chips">
+            <span class="chip chip-plum">Machine Learning</span>
+            <span class="chip chip-plum">Deep Learning</span>
+            <span class="chip chip-plum">NLP</span>
+            <span class="chip chip-plum">Generative AI</span>
+            <span class="chip chip-plum">LLM Integration</span>
+            <span class="chip chip-plum">Retrieval-Augmented Generation (RAG)</span>
+            <span class="chip chip-plum">Sentiment Analysis</span>
+            <span class="chip chip-plum">Neural Networks</span>
+          </div>
+        </div>
+
+        <!-- 2. Programming -->
+        <div class="canva-card skill-block">
+          <h3 class="skill-category-title">
+            <span class="cat-icon" aria-hidden="true">💻</span> PROGRAMMING
+          </h3>
+          <div class="skills-chips">
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">SQL</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Dart</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+          </div>
+        </div>
+
+        <!-- 3. Data & Analytics -->
+        <div class="canva-card skill-block">
+          <h3 class="skill-category-title">
+            <span class="cat-icon" aria-hidden="true">📊</span> DATA &amp; ANALYTICS
+          </h3>
+          <div class="skills-chips">
+            <span class="chip">SQL</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Exploratory Data Analysis</span>
+            <span class="chip">Data Visualization</span>
+          </div>
+        </div>
+
+        <!-- 4. Development -->
+        <div class="canva-card skill-block">
+          <h3 class="skill-category-title">
+            <span class="cat-icon" aria-hidden="true">🛠</span> DEVELOPMENT
+          </h3>
+          <div class="skills-chips">
+            <span class="chip">Flask</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Express.js</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- 5. Tools & Technologies (Full Width) -->
+        <div class="canva-card skill-block skill-block-full">
+          <h3 class="skill-category-title">
+            <span class="cat-icon" aria-hidden="true">⚙</span> TOOLS &amp; TECHNOLOGIES
+          </h3>
+          <div class="skills-chips">
+            <span class="chip">Git</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Hugging Face</span>
+            <span class="chip">Sentence Transformers</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 4: EXPERIENCE SECTION -->
+    <!-- ============================================== -->
+    <section class="section section-experience" id="experience" aria-label="Professional Experience">
+      <div class="section-tag-center">
+        <span class="tag-pill">PRACTICAL EXPERIENCE</span>
+      </div>
+      <h2 class="section-title-center">INDUSTRY INTERNSHIP</h2>
 
       <div class="experience-card-container">
-        <div class="canva-card experience-ticket">
+        <article class="canva-card experience-ticket">
           <div class="exp-header-bar">
-            <div class="exp-badge">ROLE & EXPERIENCE</div>
-            <div class="exp-dates">05-03-2025 TO 05-04-2025</div>
+            <div class="exp-badge">ROLE &amp; EXPERIENCE</div>
+            <div class="exp-dates">March 2025 – April 2025</div>
           </div>
 
           <div class="exp-body">
@@ -252,147 +426,271 @@
             <div class="exp-details-col">
               <ul class="exp-bullets">
                 <li>
-                  <span class="bullet-star">✦</span>
-                  <div>
-                    <strong>Sentiment Analysis & NLP:</strong> Conducted natural language processing pipelines to classify and extract sentiment signals from unstructured text.
-                  </div>
+                  <span class="bullet-star" aria-hidden="true">✦</span>
+                  <div>Worked on NLP and sentiment analysis tasks</div>
                 </li>
                 <li>
-                  <span class="bullet-star">✦</span>
-                  <div>
-                    <strong>Neural Network Architectures:</strong> Implemented deep learning classification models and evaluated precision/recall/F1 metrics on labeled benchmark datasets.
-                  </div>
+                  <span class="bullet-star" aria-hidden="true">✦</span>
+                  <div>Worked with neural-network classification</div>
                 </li>
                 <li>
-                  <span class="bullet-star">✦</span>
-                  <div>
-                    <strong>Data Preprocessing & Engineering:</strong> Spearheaded feature selection, tokenization, model training pipelines, and data-driven inference analysis.
-                  </div>
+                  <span class="bullet-star" aria-hidden="true">✦</span>
+                  <div>Performed data preprocessing and preparation</div>
+                </li>
+                <li>
+                  <span class="bullet-star" aria-hidden="true">✦</span>
+                  <div>Worked through model training and evaluation workflows</div>
                 </li>
               </ul>
             </div>
           </div>
 
           <div class="exp-footer-banner">
-            <span>KEY TOOLS: PYTHON • NLP • NEURAL NETS • SCIKIT-LEARN • PANDAS</span>
-            <span class="handwritten-script">verified impact ★</span>
+            <span>KEY TECHNOLOGIES: PYTHON • NLP • NEURAL NETS • SCIKIT-LEARN • PANDAS</span>
+            <span class="handwritten-script">verified practical experience ★</span>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
 
     <!-- ============================================== -->
-    <!-- SLIDE 4: FEATURED PROJECTS -->
+    <!-- SLIDE 5: FEATURED PROJECTS -->
     <!-- ============================================== -->
-    <section class="section section-projects" id="projects">
+    <section class="section section-projects" id="projects" aria-label="Featured Engineering Projects">
       <div class="section-header-split">
         <div>
-          <span class="handwritten-script header-cursive">empowered women empower the world</span>
-          <h2 class="editorial-headline section-title-left">SMALL STEPS TODAY LEAD TO BIG RESULTS</h2>
+          <span class="handwritten-script header-cursive">curated work ✦</span>
+          <h2 class="editorial-headline section-title-left">FEATURED PROJECTS</h2>
         </div>
         <div class="header-stamp-badge">
-          <span>CURATED WORK</span>
+          <span>PROJECT PORTFOLIO</span>
           <strong>03 PROJECTS</strong>
         </div>
       </div>
 
       <div class="projects-grid">
 
-        <!-- Project 1: LegalConnect (Hero Project) -->
-        <div class="canva-card project-card project-card-featured">
+        <!-- Project 1: LegalConnect (Flagship Application) -->
+        <article class="canva-card project-card project-card-featured" id="project-legalconnect">
           <div class="proj-badge-row">
-            <span class="proj-featured-tag">FLAGSHIP APPLICATION</span>
-            <span class="proj-stack-highlight">FLUTTER + LLAMA 3.3 70B</span>
+            <span class="proj-featured-tag">01 — FLAGSHIP PROJECT</span>
+            <span class="proj-stack-highlight">FLUTTER + GROQ API (LLAMA 3.3 70B)</span>
           </div>
-          <h3 class="proj-title">LegalConnect – Smart Legal Assistance Platform</h3>
-          <p class="proj-desc">
-            A comprehensive cross-platform legal services application connecting clients with advocates, featuring AI-assisted legal issue triage, calendar reminders, legal updates, and secure chat.
-          </p>
+          <h3 class="proj-title">LegalConnect</h3>
+          <p class="proj-subtitle">AI-powered legal assistance &amp; advocate discovery platform</p>
+
+          <!-- Problem & Solution -->
+          <div class="proj-problem-solution-grid">
+            <div class="prob-sol-card">
+              <div class="prob-sol-tag">
+                <span aria-hidden="true">⚠️</span> THE PROBLEM
+              </div>
+              <p class="prob-sol-text">
+                People often struggle to identify applicable legal provisions, complaint venues, jurisdiction, and appropriate next steps when facing legal challenges.
+              </p>
+            </div>
+            <div class="prob-sol-card">
+              <div class="prob-sol-tag">
+                <span aria-hidden="true">💡</span> THE SOLUTION
+              </div>
+              <p class="prob-sol-text">
+                An AI-powered legal platform designed to provide structured legal assistance, parse plain-language queries into actionable legal schema, and connect users with relevant legal professionals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Architecture Flow -->
+          <div class="arch-pipeline-container">
+            <div class="arch-pipeline-title">
+              <span aria-hidden="true">⚡</span> SYSTEM ARCHITECTURE WORKFLOW
+            </div>
+            <div class="arch-steps-flow">
+              <span class="arch-node">USER QUERY</span>
+              <span class="arch-arrow" aria-hidden="true">➔</span>
+              <span class="arch-node">QUERY PROCESSING</span>
+              <span class="arch-arrow" aria-hidden="true">➔</span>
+              <span class="arch-node arch-node-flagship">AI / LLM LAYER (LLAMA 3.3 70B)</span>
+              <span class="arch-arrow" aria-hidden="true">➔</span>
+              <span class="arch-node">LEGAL KNOWLEDGE / RETRIEVAL</span>
+              <span class="arch-arrow" aria-hidden="true">➔</span>
+              <span class="arch-node">STRUCTURED LEGAL RESPONSE</span>
+              <span class="arch-arrow" aria-hidden="true">➔</span>
+              <span class="arch-node">RECOMMENDED NEXT STEPS</span>
+            </div>
+          </div>
+
+          <!-- Technical Highlights -->
           <div class="proj-features-list">
             <div class="feature-item">
-              <span class="feat-icon">✓</span>
-              <span><strong>Groq API + Llama 3.3 70B:</strong> Parses plain-language legal questions into structured schema (case type, applicable legal sections, filing venue, next steps, and fine range).</span>
+              <span class="feat-icon" aria-hidden="true">✓</span>
+              <span><strong>LLM Integration &amp; NLP:</strong> Leveraged Groq API with Llama 3.3 70B to structure plain-language legal queries into standardized schema including case type, applicable legal sections, filing venue, recommended next steps, and estimated fine range.</span>
             </div>
             <div class="feature-item">
-              <span class="feat-icon">✓</span>
-              <span><strong>Deterministic Rule Fallback:</strong> Zero-downtime offline fallback for critical legal scenarios with strict disclaimer safety.</span>
+              <span class="feat-icon" aria-hidden="true">✓</span>
+              <span><strong>Legal Knowledge &amp; Retrieval Workflow:</strong> Implemented a retrieval pipeline with deterministic rule fallback to guarantee reliable legal guidance and strict informational-use disclaimer safety.</span>
             </div>
             <div class="feature-item">
-              <span class="feat-icon">✓</span>
-              <span><strong>Full Stack Backend:</strong> Node.js / Express REST API, JWT authentication, role-based authorization, and Firebase notifications.</span>
+              <span class="feat-icon" aria-hidden="true">✓</span>
+              <span><strong>Full-Stack Architecture &amp; Security:</strong> Built a cross-platform client in Flutter/Dart backed by a Node.js and Express REST API, secured with JWT authentication, role-based authorization, and Firebase notifications.</span>
             </div>
           </div>
+
+          <!-- Visual Case Study Showcase -->
+          <div class="case-study-showcase">
+            <div class="case-study-header">
+              <span aria-hidden="true">📷</span> VISUAL CASE STUDY GALLERY
+            </div>
+            <div class="case-study-grid">
+              
+              <div class="case-study-slot">
+                <div class="case-study-blueprint">
+                  <span class="blueprint-icon" aria-hidden="true">🔐</span>
+                  <div class="blueprint-lines"></div>
+                  <div class="blueprint-lines"></div>
+                </div>
+                <span class="case-study-caption">Login &amp; Onboarding</span>
+              </div>
+
+              <div class="case-study-slot">
+                <div class="case-study-blueprint">
+                  <span class="blueprint-icon" aria-hidden="true">🤖</span>
+                  <div class="blueprint-lines"></div>
+                  <div class="blueprint-lines"></div>
+                </div>
+                <span class="case-study-caption">AI Legal Assistant</span>
+              </div>
+
+              <div class="case-study-slot">
+                <div class="case-study-blueprint">
+                  <span class="blueprint-icon" aria-hidden="true">📋</span>
+                  <div class="blueprint-lines"></div>
+                  <div class="blueprint-lines"></div>
+                </div>
+                <span class="case-study-caption">Structured Legal Response</span>
+              </div>
+
+              <div class="case-study-slot">
+                <div class="case-study-blueprint">
+                  <span class="blueprint-icon" aria-hidden="true">⚖️</span>
+                  <div class="blueprint-lines"></div>
+                  <div class="blueprint-lines"></div>
+                </div>
+                <span class="case-study-caption">Advocate Discovery</span>
+              </div>
+
+            </div>
+          </div>
+
           <div class="tech-tags-cloud">
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">Dart</span>
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">Express</span>
+            <span class="tech-pill">Llama 3.3 70B</span>
             <span class="tech-pill">Groq API</span>
-            <span class="tech-pill">Llama 3.3</span>
+            <span class="tech-pill">NLP</span>
+            <span class="tech-pill">LLM Integration</span>
+            <span class="tech-pill">Legal Retrieval</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express.js</span>
+            <span class="tech-pill">Flutter</span>
             <span class="tech-pill">JWT</span>
+            <span class="tech-pill">Role-Based Auth</span>
             <span class="tech-pill">Firebase</span>
           </div>
-        </div>
+        </article>
 
         <!-- Project 2: AI News Summarizer -->
-        <div class="canva-card project-card">
-          <div class="tape-strip tape-strip-right"></div>
+        <article class="canva-card project-card" id="project-summarizer">
+          <div class="tape-strip tape-strip-right" aria-hidden="true"></div>
           <div class="proj-badge-row">
-            <span class="proj-category-tag">NLP & SUMMARIZATION</span>
+            <span class="proj-category-tag">02 — NLP &amp; INFORMATION RETRIEVAL</span>
           </div>
           <h3 class="proj-title">AI News Summarizer</h3>
           <p class="proj-desc">
-            An NLP-powered text distillation engine that digests high-velocity machine learning news and research articles to output concise, actionable executive summaries.
+            Python-based NLP application that processes AI-related news and research content and generates concise summaries for faster information consumption.
           </p>
+
+          <!-- Workflow -->
+          <div class="proj-workflow-bar">
+            <span class="wf-step">ARTICLE</span>
+            <span class="wf-arrow" aria-hidden="true">➔</span>
+            <span class="wf-step">TEXT PROCESSING</span>
+            <span class="wf-arrow" aria-hidden="true">➔</span>
+            <span class="wf-step">NLP / SUMMARIZATION</span>
+            <span class="wf-arrow" aria-hidden="true">➔</span>
+            <span class="wf-step">CONCISE SUMMARY</span>
+          </div>
+
           <ul class="proj-mini-bullets">
             <li>Text preprocessing, tokenization, and stop-word filtering.</li>
             <li>Exploratory data analysis on news corpora.</li>
             <li>Concise summary extraction tailored for rapid industry briefings.</li>
           </ul>
+
           <div class="tech-tags-cloud">
             <span class="tech-pill">Python</span>
             <span class="tech-pill">NLP</span>
-            <span class="tech-pill">EDA</span>
+            <span class="tech-pill">Exploratory Data Analysis</span>
             <span class="tech-pill">NLTK</span>
           </div>
-        </div>
+        </article>
 
         <!-- Project 3: Data Analysis & Visualization -->
-        <div class="canva-card project-card">
+        <article class="canva-card project-card" id="project-analytics">
           <div class="proj-badge-row">
-            <span class="proj-category-tag">BI & ANALYTICS</span>
+            <span class="proj-category-tag">03 — DATA ANALYTICS &amp; BI</span>
           </div>
-          <h3 class="proj-title">Data Analysis & Visualization</h3>
+          <h3 class="proj-title">Data Analysis &amp; Visualization</h3>
           <p class="proj-desc">
-            End-to-end data cleansing, exploratory modeling, and dashboard creation across healthcare records, financial portfolios, and historic Olympic datasets.
+            Explored healthcare, finance, and Olympic-medal datasets through exploratory data analysis.
           </p>
+
+          <!-- Areas Analyzed -->
+          <div class="analysis-areas-grid">
+            <div class="analysis-area-pill">
+              <span class="area-icon" aria-hidden="true">🏥</span>
+              <span class="area-label">Healthcare Datasets</span>
+            </div>
+            <div class="analysis-area-pill">
+              <span class="area-icon" aria-hidden="true">📈</span>
+              <span class="area-label">Finance Portfolios</span>
+            </div>
+            <div class="analysis-area-pill">
+              <span class="area-icon" aria-hidden="true">🏅</span>
+              <span class="area-label">Olympic Medal Data</span>
+            </div>
+          </div>
+
           <ul class="proj-mini-bullets">
-            <li>Complex pivot analysis, validation, and multi-tier data cleaning.</li>
-            <li>Interactive Power BI & Tableau dashboards with KPIs.</li>
-            <li>SQL query optimization and structured statistical analysis.</li>
+            <li>Complex pivot analysis, validation, and multi-tier data cleaning on structured records.</li>
+            <li>Interactive Power BI &amp; Tableau dashboards showcasing KPIs and trends.</li>
+            <li>SQL query optimization and structured statistical analysis across tabular records.</li>
           </ul>
+
           <div class="tech-tags-cloud">
+            <span class="tech-pill">SQL</span>
             <span class="tech-pill">Excel</span>
             <span class="tech-pill">Power BI</span>
             <span class="tech-pill">Tableau</span>
-            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">NumPy</span>
+            <span class="tech-pill">Matplotlib</span>
+            <span class="tech-pill">Exploratory Data Analysis</span>
+            <span class="tech-pill">Data Visualization</span>
           </div>
-        </div>
+        </article>
 
       </div>
     </section>
 
 
     <!-- ============================================== -->
-    <!-- SLIDE 5: RESEARCH PUBLICATION -->
+    <!-- SLIDE 6: RESEARCH PUBLICATION -->
     <!-- ============================================== -->
-    <section class="section section-research" id="research">
+    <section class="section section-research" id="research" aria-label="Research & Publications">
       <div class="research-container">
         
-        <div class="canva-card research-certificate-card">
+        <article class="canva-card research-certificate-card">
           <div class="cert-ribbon">
-            <span>PEER-REVIEWED PUBLICATION • 2026</span>
+            <span>PEER-REVIEWED PUBLICATION • AUGUST 2026</span>
           </div>
 
           <div class="cert-body">
@@ -407,7 +705,7 @@
             
             <div class="cert-doi-badge">
               <span class="doi-label">DOI REFERENCE:</span>
-              <a href="https://doi.org/10.5281/zenodo.21997190" target="_blank" class="doi-link">10.5281/zenodo.21997190 ↗</a>
+              <a href="https://doi.org/10.5281/zenodo.21997190" target="_blank" rel="noopener noreferrer" class="doi-link" title="Open LegalConnect Research Paper via Zenodo DOI">10.5281/zenodo.21997190 ↗</a>
             </div>
 
             <p class="cert-summary">
@@ -416,174 +714,218 @@
           </div>
 
           <div class="cert-footer-stamp">
-            <div class="stamp-seal">
+            <div class="stamp-seal" aria-hidden="true">
               <span>IJCSE</span>
               <span>VERIFIED</span>
               <span>★ 2026 ★</span>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
     </section>
 
 
     <!-- ============================================== -->
-    <!-- SLIDE 6: SKILLS & CERTIFICATIONS -->
+    <!-- SLIDE 7: EDUCATION SECTION -->
     <!-- ============================================== -->
-    <section class="section section-skills" id="skills">
+    <section class="section section-education" id="education" aria-label="Education & Academic Background">
       <div class="section-tag-center">
-        <span class="tag-pill">CORE CAPABILITIES</span>
+        <span class="tag-pill">ACADEMIC FOUNDATION</span>
       </div>
-      <h2 class="section-title-center">MEET THE TOOLKIT</h2>
+      <h2 class="section-title-center">EDUCATION</h2>
 
-      <div class="skills-grid-wrapper">
+      <div class="education-card canva-card">
+        <div class="edu-header-row">
+          <div>
+            <h3 class="edu-degree">B.E. Artificial Intelligence &amp; Machine Learning</h3>
+            <div class="edu-institution">Don Bosco Institute of Technology, Bengaluru</div>
+            <div class="edu-university">Affiliated to Visvesvaraya Technological University (VTU)</div>
+          </div>
+          <div class="edu-badge-box">
+            <span class="edu-years">2023 – 2027</span>
+            <span class="edu-location">Bengaluru, Karnataka, India</span>
+          </div>
+        </div>
 
-        <!-- Left: Skills Categories -->
-        <div class="skills-categories-box">
-
-          <div class="canva-card skill-block">
-            <h3 class="skill-category-title">
-              <span class="cat-icon">⚡</span> AI & MACHINE LEARNING
-            </h3>
-            <div class="skills-chips">
+        <div class="edu-details-grid">
+          <div>
+            <h4 class="edu-subhead">CORE COMPUTATIONAL COURSEWORK</h4>
+            <div class="edu-chips-box">
+              <span class="chip">Data Structures &amp; Algorithms</span>
+              <span class="chip">Object-Oriented Programming (Java / Python)</span>
+              <span class="chip">Database Management Systems (SQL)</span>
+              <span class="chip">Operating Systems</span>
+              <span class="chip">Software Engineering</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="edu-subhead">SPECIALIZED AI &amp; ANALYTICS FOCUS</h4>
+            <div class="edu-chips-box">
               <span class="chip chip-plum">Machine Learning</span>
               <span class="chip chip-plum">Deep Learning</span>
-              <span class="chip chip-plum">NLP</span>
-              <span class="chip chip-plum">Sentiment Analysis</span>
-              <span class="chip chip-plum">Neural Networks</span>
-              <span class="chip chip-plum">Generative AI</span>
-            </div>
-          </div>
-
-          <div class="canva-card skill-block">
-            <h3 class="skill-category-title">
-              <span class="cat-icon">💻</span> PROGRAMMING LANGUAGES
-            </h3>
-            <div class="skills-chips">
-              <span class="chip">Python</span>
-              <span class="chip">Java</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Dart</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">HTML5 & CSS3</span>
-            </div>
-          </div>
-
-          <div class="canva-card skill-block">
-            <h3 class="skill-category-title">
-              <span class="cat-icon">🛠</span> FRAMEWORKS, TOOLS & DATABASES
-            </h3>
-            <div class="skills-chips">
-              <span class="chip">Flutter</span>
-              <span class="chip">FastAPI</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">Express</span>
-              <span class="chip">PyTorch</span>
-              <span class="chip">MySQL</span>
-              <span class="chip">MongoDB</span>
-              <span class="chip">Git & GitHub</span>
-            </div>
-          </div>
-
-          <div class="canva-card skill-block">
-            <h3 class="skill-category-title">
-              <span class="cat-icon">📊</span> DATA & BUSINESS INTELLIGENCE
-            </h3>
-            <div class="skills-chips">
-              <span class="chip">Power BI</span>
-              <span class="chip">Tableau</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">Matplotlib</span>
-              <span class="chip">Excel Modeling</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Retro Checkerboard Panel from Canva Template -->
-        <div class="canva-card checkerboard-container">
-          <div class="checkerboard-pattern"></div>
-          <div class="checkerboard-overlay-card">
-            <span class="handwritten-script chk-script">industry accredited</span>
-            <h3 class="chk-title">CERTIFICATIONS</h3>
-            <div class="cert-badges-list">
-              <button type="button" class="cert-item cert-item-btn" id="deloitte-cert-btn" aria-haspopup="dialog" aria-controls="cert-modal" title="Click to view Deloitte Certificate PDF">
-                <div class="cert-btn-left">
-                  <span class="cert-tick">★</span>
-                  <span>Deloitte Certified</span>
-                </div>
-                <span class="cert-action-pill">View PDF ↗</span>
-              </button>
-              <button type="button" class="cert-item cert-item-btn" id="infosys-cert-btn" aria-haspopup="dialog" aria-controls="infosys-modal" title="Click to view Infosys Springboard Certificate PDF">
-                <div class="cert-btn-left">
-                  <span class="cert-tick">★</span>
-                  <span>Infosys Springboard</span>
-                </div>
-                <span class="cert-action-pill">View PDF ↗</span>
-              </button>
-              <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjE3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNDU1MTQzNF8xNjk2MjU0ODc3LnBuZyIsInVzZXJuYW1lIjoiQXNoaWZhIHBhcnZlZW4uayJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2Fthumb_4551434_1696254877.png&_branch_match_id=1634886066216063754&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2F19HU1LrAoqHJJsq8rSk1LLSrKzEuPTyrKLy9OLbJ1TUlPBQCoFL6ROwAAAA%3D%3D" target="_blank" rel="noopener noreferrer" class="cert-item cert-item-btn" id="simplilearn-cert-btn" title="Verify Simplilearn Certified Certificate">
-                <div class="cert-btn-left">
-                  <span class="cert-tick">★</span>
-                  <span>Simplilearn Certified</span>
-                </div>
-                <span class="cert-action-pill">Verify ↗</span>
-              </a>
-              <a href="https://www.guvi.in/verify-certificate?id=4d277801ek2Q786ZS7" target="_blank" rel="noopener noreferrer" class="cert-item cert-item-btn" id="guvi-cert-btn" title="Verify GUVI Tech Accreditation Certificate on guvi.in">
-                <div class="cert-btn-left">
-                  <span class="cert-tick">★</span>
-                  <span>GUVI Tech Accreditation</span>
-                </div>
-                <span class="cert-action-pill">Verify ↗</span>
-              </a>
-            </div>
-            <div class="chk-quote">
-              "Lasting mastery is quiet, deep, and steady. Build with pride."
+              <span class="chip chip-plum">Natural Language Processing</span>
+              <span class="chip chip-plum">Generative AI &amp; LLMs</span>
+              <span class="chip chip-plum">Data Analytics &amp; Statistics</span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
 
     <!-- ============================================== -->
-    <!-- SLIDE 7: CONTACT & FOOTER -->
+    <!-- SLIDE 8: CERTIFICATIONS SECTION -->
     <!-- ============================================== -->
-    <section class="section section-contact" id="contact">
+    <section class="section section-certifications" id="certifications" aria-label="Certifications & Credentials">
+      <div class="section-tag-center">
+        <span class="tag-pill">VERIFIED CREDENTIALS</span>
+      </div>
+      <h2 class="section-title-center">CERTIFICATIONS</h2>
+      <p class="section-subtitle-center">
+        Verified industry credentials across Data Analytics, Python Programming, and Generative AI.
+      </p>
+
+      <div class="certifications-container">
+        <div class="certs-quad-grid">
+
+          <!-- 1. Deloitte / Forage -->
+          <article class="canva-card cert-credential-card">
+            <div>
+              <div class="cert-card-header">
+                <span class="cert-issuer-badge">DELOITTE / FORAGE</span>
+                <span class="cert-date-text">August 16, 2025</span>
+              </div>
+              <h3 class="cert-name-title">Data Analytics Job Simulation</h3>
+              <p class="cert-desc-text">
+                Certificate of Completion for practical tasks in data analytics, data preparation, forensic technology, and communicating analytical findings.
+              </p>
+            </div>
+            <div class="cert-card-bottom">
+              <div class="cert-meta-code">
+                Code: <code>LEuGhGCJevSTnSJ64</code>
+              </div>
+              <button type="button" class="cert-btn-action" id="deloitte-cert-btn" aria-haspopup="dialog" aria-controls="cert-modal" title="View Deloitte Certificate">
+                <span>View Certificate ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. Infosys Springboard -->
+          <article class="canva-card cert-credential-card">
+            <div>
+              <div class="cert-card-header">
+                <span class="cert-issuer-badge">INFOSYS SPRINGBOARD</span>
+                <span class="cert-date-text">September 19, 2024</span>
+              </div>
+              <h3 class="cert-name-title">Programming Fundamentals using Python – Part 1</h3>
+              <p class="cert-desc-text">
+                Course Completion Certificate awarded by Infosys Limited (ETA) covering core programming foundations, control structures, and algorithm logic in Python.
+              </p>
+            </div>
+            <div class="cert-card-bottom">
+              <div class="cert-meta-code">
+                Verify: <code>verify.onwingspan.com</code>
+              </div>
+              <button type="button" class="cert-btn-action" id="infosys-cert-btn" aria-haspopup="dialog" aria-controls="infosys-modal" title="View Infosys Certificate">
+                <span>View Certificate ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Simplilearn SkillUp -->
+          <article class="canva-card cert-credential-card">
+            <div>
+              <div class="cert-card-header">
+                <span class="cert-issuer-badge">SIMPLILEARN SKILLUP</span>
+                <span class="cert-date-text">October 02, 2023</span>
+              </div>
+              <h3 class="cert-name-title">ChatGPT 101: What is ChatGPT?</h3>
+              <p class="cert-desc-text">
+                Certificate of Course Completion validating foundational knowledge in generative AI, conversational transformer architectures, and prompt applications.
+              </p>
+            </div>
+            <div class="cert-card-bottom">
+              <div class="cert-meta-code">
+                Issuer: <code>Simplilearn SkillUp</code>
+              </div>
+              <button type="button" class="cert-btn-action" id="simplilearn-cert-btn" aria-haspopup="dialog" aria-controls="simplilearn-modal" title="View Simplilearn Certificate">
+                <span>View Certificate ↗</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. GUVI (An HCL Group Company) -->
+          <article class="canva-card cert-credential-card">
+            <div>
+              <div class="cert-card-header">
+                <span class="cert-issuer-badge">GUVI / GOOGLE FOR DEVELOPERS</span>
+                <span class="cert-date-text">October 02, 2024</span>
+              </div>
+              <h3 class="cert-name-title">SAWIT.AI Learnathon — Generative AI</h3>
+              <p class="cert-desc-text">
+                Certificate of Achievement for the SAWIT.AI Learnathon, supported by Women Techmakers Google for Developers, HCLTech, AICTE, and NASSCOM.
+              </p>
+            </div>
+            <div class="cert-card-bottom">
+              <div class="cert-meta-code">
+                ID: <code>4d277801ek2Q786ZS7</code>
+              </div>
+              <button type="button" class="cert-btn-action" id="guvi-cert-btn" aria-haspopup="dialog" aria-controls="guvi-modal" title="View GUVI Certificate">
+                <span>View Certificate ↗</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SLIDE 9: CONTACT & FOOTER -->
+    <!-- ============================================== -->
+    <section class="section section-contact" id="contact" aria-label="Contact & Inquiries">
       <div class="canva-card contact-hero-card">
-        <span class="handwritten-script contact-script">start a conversation today</span>
-        <h2 class="editorial-headline contact-title">YOUR NEXT LEVEL REQUIRES COLLABORATION</h2>
+        <span class="handwritten-script contact-script">start a conversation today ✦</span>
+        <h2 class="editorial-headline contact-title">Let's Build Something Meaningful.</h2>
         <p class="contact-subtitle">
-          Open for Artificial Intelligence & Machine Learning internships, full-stack AI development opportunities, and research partnerships.
+          Open for Artificial Intelligence &amp; Machine Learning internships, Data Analyst roles, full-stack AI development opportunities, and collaborative research.
         </p>
 
         <div class="contact-channels-grid">
           
-          <a href="mailto:ashifaparveen774@gmail.com" class="contact-channel-item">
-            <div class="channel-icon">✉</div>
+          <a href="mailto:ashifaparveen774@gmail.com" class="contact-channel-item" title="Send email to Ashifa">
+            <div class="channel-icon" aria-hidden="true">✉</div>
             <div class="channel-info">
               <span class="channel-type">EMAIL DIRECT</span>
               <span class="channel-detail">ashifaparveen774@gmail.com</span>
             </div>
           </a>
 
-          <a href="tel:6362444624" class="contact-channel-item">
-            <div class="channel-icon">📞</div>
+          <a href="tel:6362444624" class="contact-channel-item" title="Call Ashifa">
+            <div class="channel-icon" aria-hidden="true">📞</div>
             <div class="channel-info">
               <span class="channel-type">PHONE</span>
               <span class="channel-detail">+91 6362444624</span>
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/ashifa-parveen-k-033706292?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
-            <div class="channel-icon">🔗</div>
+          <a href="https://www.linkedin.com/in/ashifa-parveen-k-033706292?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-channel-item" title="Connect with Ashifa on LinkedIn">
+            <div class="channel-icon" aria-hidden="true">🔗</div>
             <div class="channel-info">
               <span class="channel-type">LINKEDIN</span>
               <span class="channel-detail">ashifa-parveen-k ↗</span>
             </div>
           </a>
+
+          <div class="contact-channel-item">
+            <div class="channel-icon" aria-hidden="true">📍</div>
+            <div class="channel-info">
+              <span class="channel-type">LOCATION</span>
+              <span class="channel-detail">Bengaluru, Karnataka, India</span>
+            </div>
+          </div>
 
         </div>
 
@@ -591,27 +933,31 @@
           <a href="mailto:ashifaparveen774@gmail.com?subject=Opportunity%20Discussion%20with%20Ashifa" class="btn-plum-giant">
             Send an Email ➔
           </a>
-          <a href="new_resume.pdf" target="_blank" download class="btn-blush-giant">
+          <a href="new_resume.pdf" target="_blank" download="Ashifa_Parveen_Resume.pdf" class="btn-blush-giant">
             Download Resume (PDF) ↓
           </a>
         </div>
 
         <div class="footer-bottom-bar">
-          <span>DESIGNED WITH EDITORIAL CANVA AESTHETICS • 360° FRAME ENGINE</span>
-          <span>© 2026 ASHIFA PARVEEN K. ALL RIGHTS RESERVED.</span>
+          <span>THE FUTURE BELONGS TO WOMEN WHO BUILD ✦</span>
+          <span>© 2026 ASHIFA PARVEEN K • B.E. ARTIFICIAL INTELLIGENCE &amp; MACHINE LEARNING</span>
         </div>
       </div>
     </section>
 
-  </div>
+  </main>
  
-  <!-- Certificate Viewer Modal (Deloitte Data Analytics) -->
+  <!-- ============================================== -->
+  <!-- CERTIFICATE VIEWER MODALS -->
+  <!-- ============================================== -->
+
+  <!-- Modal 1: Deloitte Data Analytics -->
   <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title" hidden>
     <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
     <div class="cert-modal-card">
       <div class="cert-modal-header">
         <div class="cert-modal-titles">
-          <span class="cert-modal-badge">INDUSTRY ACCREDITATION</span>
+          <span class="cert-modal-badge">DELOITTE / FORAGE CREDENTIAL</span>
           <h3 id="modal-cert-title" class="cert-modal-h3">Deloitte — Data Analytics Job Simulation</h3>
           <p class="cert-modal-sub">Certificate of Completion • August 16th, 2025 • Awarded to Ashifa Parveen</p>
         </div>
@@ -645,14 +991,14 @@
     </div>
   </div>
 
-  <!-- Certificate Viewer Modal (Infosys Springboard) -->
+  <!-- Modal 2: Infosys Springboard -->
   <div id="infosys-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-infosys-title" hidden>
     <div class="cert-modal-backdrop" id="infosys-modal-backdrop"></div>
     <div class="cert-modal-card">
       <div class="cert-modal-header">
         <div class="cert-modal-titles">
           <span class="cert-modal-badge">INFOSYS SPRINGBOARD CERTIFICATION</span>
-          <h3 id="modal-infosys-title" class="cert-modal-h3">Programming Fundamentals using Python - Part 1</h3>
+          <h3 id="modal-infosys-title" class="cert-modal-h3">Programming Fundamentals using Python – Part 1</h3>
           <p class="cert-modal-sub">Course Completion Certificate • September 19, 2024 • Awarded to Ashifa Parveen</p>
         </div>
         <button id="infosys-modal-close" class="cert-modal-close-btn" aria-label="Close Certificate Preview">✕</button>
@@ -685,6 +1031,86 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=9"></script>
+  <!-- Modal 3: Simplilearn SkillUp -->
+  <div id="simplilearn-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-simplilearn-title" hidden>
+    <div class="cert-modal-backdrop" id="simplilearn-modal-backdrop"></div>
+    <div class="cert-modal-card">
+      <div class="cert-modal-header">
+        <div class="cert-modal-titles">
+          <span class="cert-modal-badge">SIMPLILEARN SKILLUP CREDENTIAL</span>
+          <h3 id="modal-simplilearn-title" class="cert-modal-h3">ChatGPT 101: What is ChatGPT?</h3>
+          <p class="cert-modal-sub">Course Completion Certificate • October 02, 2023 • Awarded to Ashifa Parveen K</p>
+        </div>
+        <button id="simplilearn-modal-close" class="cert-modal-close-btn" aria-label="Close Certificate Preview">✕</button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-preview-frame">
+          <picture>
+            <source srcset="simplilearn_certificate_preview.webp" type="image/webp">
+            <img src="simplilearn_certificate_preview.png" alt="Simplilearn ChatGPT 101 Certificate - Ashifa Parveen K" class="cert-preview-img" loading="lazy">
+          </picture>
+        </div>
+      </div>
+
+      <div class="cert-modal-footer">
+        <div class="cert-verify-info">
+          <span>Issued by Simplilearn SkillUp</span>
+          <span class="cert-dot">•</span>
+          <span>Verified Online Course</span>
+        </div>
+        <div class="cert-modal-actions">
+          <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjE3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNDU1MTQzNF8xNjk2MjU0ODc3LnBuZyIsInVzZXJuYW1lIjoiQXNoaWZhIHBhcnZlZW4uayJ9&amp;utm_source=shared-certificate&amp;utm_medium=app_lms&amp;utm_campaign=shared-certificate-promotion" target="_blank" rel="noopener noreferrer" class="btn-cert-primary">
+            Verify on Simplilearn ↗
+          </a>
+          <a href="simplilearn_certificate_preview.png" target="_blank" rel="noopener noreferrer" class="btn-cert-secondary">
+            Open Image ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: GUVI / Google for Developers -->
+  <div id="guvi-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-guvi-title" hidden>
+    <div class="cert-modal-backdrop" id="guvi-modal-backdrop"></div>
+    <div class="cert-modal-card">
+      <div class="cert-modal-header">
+        <div class="cert-modal-titles">
+          <span class="cert-modal-badge">GUVI / GOOGLE FOR DEVELOPERS CREDENTIAL</span>
+          <h3 id="modal-guvi-title" class="cert-modal-h3">SAWIT.AI Learnathon — Fundamentals of Generative AI</h3>
+          <p class="cert-modal-sub">Certificate of Achievement • October 02, 2024 • Awarded to Ashifa Parveen K</p>
+        </div>
+        <button id="guvi-modal-close" class="cert-modal-close-btn" aria-label="Close Certificate Preview">✕</button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-preview-frame">
+          <picture>
+            <source srcset="guvi_certificate_preview.webp" type="image/webp">
+            <img src="guvi_certificate_preview.png" alt="GUVI SAWIT.AI Learnathon Certificate - Ashifa Parveen K" class="cert-preview-img" loading="lazy">
+          </picture>
+        </div>
+      </div>
+
+      <div class="cert-modal-footer">
+        <div class="cert-verify-info">
+          <span>Credential ID: <code>4d277801ek2Q786ZS7</code></span>
+          <span class="cert-dot">•</span>
+          <span>Women Techmakers • HCLTech • AICTE • NASSCOM</span>
+        </div>
+        <div class="cert-modal-actions">
+          <a href="https://www.guvi.in/verify-certificate?id=4d277801ek2Q786ZS7" target="_blank" rel="noopener noreferrer" class="btn-cert-primary">
+            Verify on GUVI.in ↗
+          </a>
+          <a href="guvi_certificate_preview.png" target="_blank" rel="noopener noreferrer" class="btn-cert-secondary">
+            Open Image ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=10"></script>
 </body>
 </html>
